@@ -142,8 +142,6 @@ class PrerenderListener extends AbstractListenerAggregate implements EventManage
         $prerenderEvent = new PrerenderEvent($request, $response);
         $eventManager->trigger(PrerenderEvent::EVENT_PRERENDER_POST, $prerenderEvent);
 
-        $originalRequestHeaders = $originalRequest->getHeaders();
-
         return $prerenderEvent->getResponse();
     }
 
