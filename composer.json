@@ -1,5 +1,5 @@
 {
-    "name": "zfr/zfr-prerender",
+    "name": "stylet/zfr-prerender",
     "description": "Integration with prerender.io service",
     "license": "MIT",
     "type": "library",
