@@ -39,6 +39,9 @@ class ModuleOptionsTest extends TestCase
         $moduleOptions->setIgnoredExtensions(['.jpg']);
         $this->assertEquals(['.jpg'], $moduleOptions->getIgnoredExtensions());
 
+        $moduleOptions->setHttpClientOptions(['sslverifypeer' => false, 'timeout' => 60]);
+        $this->assertEquals(['sslverifypeer' => false, 'timeout' => 60,], $moduleOptions->getHttpClientOptions());
+
         $moduleOptions->setPrerenderUrl('http://myprerender.com');
         $this->assertEquals('http://myprerender.com', $moduleOptions->getPrerenderUrl());
 
