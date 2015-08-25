@@ -57,6 +57,11 @@ class ModuleOptions extends AbstractOptions
     protected $blacklistUrls = [];
 
     /**
+     * @var array
+     */
+    protected $httpClientOptions = [];
+
+    /**
      * Set the prerender service URL
      *
      * @param string $prerenderUrl
@@ -180,5 +185,26 @@ class ModuleOptions extends AbstractOptions
     public function getBlacklistUrls()
     {
         return $this->blacklistUrls;
+    }
+
+
+    /**
+     * Set the HTTP Client options
+     *
+     * @param array $httpClientOptions
+     */
+    public function setHttpClientOptions(array $httpClientOptions)
+    {
+        $this->httpClientOptions = $httpClientOptions;
+    }
+
+    /**
+     * Get the HTTP Client options
+     *
+     * @return array
+     */
+    public function getHttpClientOptions()
+    {
+        return $this->httpClientOptions;
     }
 }

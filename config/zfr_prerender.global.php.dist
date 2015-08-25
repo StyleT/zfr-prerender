@@ -63,5 +63,10 @@ return array(
          * those ones. It uses a regex, so you can be specific here!
          */
         // 'blacklist_urls' => array()
+
+        /**
+         * An optional options you set for ZF2 http client
+         */
+        // 'http_client_options' => array()
     )
 );

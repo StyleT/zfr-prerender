@@ -91,6 +91,9 @@ class PrerenderListener extends AbstractListenerAggregate implements EventManage
     {
         if (null === $this->httpClient) {
             $this->httpClient = new HttpClient();
+            if ($httpClientOptions = $this->moduleOptions->getHttpClientOptions()) {
+                $this->httpClient->setOptions($httpClientOptions);
+            }
         }
 
         return $this->httpClient;
