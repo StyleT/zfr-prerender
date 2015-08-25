@@ -83,8 +83,12 @@ return [
             '.xml'
         ],
 
+        // HTTP client options
+        'http_client_options' => [],
+
         // Whitelist and blacklist URLs
         'whitelist_urls' => [],
-        'blacklist_urls' => []
+        'blacklist_urls' => [],
+
     ]
 ];
